@@ -9,20 +9,16 @@ class StudentsController < ApplicationController
 
   end
 
-
-  def activate_student
+  def activity
       @student = Student.find(params[:id])
-    if @student.active == true
-        @student.active=false
-        @student.save
-      #  render "activate_student"
+   if  @student.active == true
+        render 'activity'
     else
-      @student.active=true
-      @student.save
-     #render "activate_student"
+       @student.active = true
+       @student.save
+       redirect_to student_path(@student)
     end
-      #redirect_to :controller => "students",:action =>"show"
-      redirect_to student_path(@student)
+
   end
 
   private
