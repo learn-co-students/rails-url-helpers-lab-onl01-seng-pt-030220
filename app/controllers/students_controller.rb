@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
   end
 
 
-  def activate_student
+  def active
       @student = Student.find(params[:id])
     if @student.active == true
         @student.active=false
