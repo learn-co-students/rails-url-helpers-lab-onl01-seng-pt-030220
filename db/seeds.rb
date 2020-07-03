@@ -8,3 +8,4 @@
 
 
 Student.create(first_name:"ahmed",last_name:"afandy")
+Student.create!(first_name: "Aylin", last_name: "Afandy")

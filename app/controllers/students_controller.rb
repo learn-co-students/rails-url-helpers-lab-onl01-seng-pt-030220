@@ -6,6 +6,17 @@ class StudentsController < ApplicationController
   end
 
   def show
+
+  end
+
+
+  def active
+    if Student.active == false
+      @student = Student.find(params[:id])
+      render "activate_student"
+    else
+      redirect_to :back
+    end
   end
 
   private
@@ -14,8 +25,4 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:id])
     end
 
-    def active
-
-       
-    end
 end
