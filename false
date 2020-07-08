@@ -1,0 +1,2 @@
+      invoke  active_record
+    conflict    db/migrate/20200708021109_add_default_value_to_active_attribute.rb
